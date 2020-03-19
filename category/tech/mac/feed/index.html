@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Mac &#8211; Bill Glick .:. tech . art . God . life</title>
+	<atom:link href="/category/tech/mac/feed/" rel="self" type="application/rss+xml" />
+	<link>http://blog.billglick.com</link>
+	<description>thoughts on technology, arts, God, and life</description>
+	<lastBuildDate>Sat, 23 Oct 2010 00:47:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+	<item>
+		<title>Drobo Woes</title>
+		<link>/2010/10/22/drobo-woes/</link>
+				<comments>/2010/10/22/drobo-woes/#comments</comments>
+				<pubDate>Fri, 22 Oct 2010 09:13:59 +0000</pubDate>
+		<dc:creator><![CDATA[billglick]]></dc:creator>
+				<category><![CDATA[Mac]]></category>
+		<category><![CDATA[Technology]]></category>
+
+		<guid isPermaLink="false">/?p=229</guid>
+				<description><![CDATA[Friday, Oct 15: After a couple of years of considering it, I finally bought a Drobo for home use. Monday, Oct 18: The Drobo (2nd generation) arrived and I set it up with my Mac Mini.  I installed 1 1TB drive and 2 500GB drives.  I set it up with HFS+ and configured email alerts, &#8230; <a href="/2010/10/22/drobo-woes/" class="more-link">Continue reading <span class="screen-reader-text">Drobo Woes</span></a>]]></description>
+								<content:encoded><![CDATA[<p><strong>Friday, Oct 15:</strong></p>
+<p>After a couple of years of considering it, I finally bought a Drobo for home use.</p>
+<p><strong>Monday, Oct 18:</strong></p>
+<p>The Drobo (2nd generation) arrived and I set it up with my Mac Mini.  I installed 1 1TB drive and 2 500GB drives.  I set it up with HFS+ and configured email alerts, etc. as recommended. Then I started migrating data from the existing external 1TB drive.</p>
+<p><strong>Tuesday, Oct 19:</strong></p>
+<p>Added another 1TB disk that I removed from an old Seagate external drive. Everything seemed fine as I migrated the remaining data from the still existing 1TB external drive.</p>
+<p><strong>Wednesday, Oct 20:</strong></p>
+<p>All data had migrated to the Drobo and things had been working fine for a few hours. So, I unplugged the external drive, removed it&#8217;s 1TB Seagate drive, and replaced one of the 500GB drives with the 1TB drive.  So, at this point the Drobo has 3 1TB drives and 1 500GB drive.  The Drobo began to rebuild the Data Protection. It calculated it would take about 13 hours to complete.</p>
+<p><a href="/wp-content/uploads/2010/10/screen-shot-2010-10-20-at-63153-pm.png"><img class="aligncenter size-medium wp-image-233" title="Wednesday Screenshot of Drobo Dashboard" src="/wp-content/uploads/2010/10/screen-shot-2010-10-20-at-63153-pm-300x130.png" alt="" width="300" height="130" srcset="/wp-content/uploads/2010/10/screen-shot-2010-10-20-at-63153-pm-300x130.png 300w, /wp-content/uploads/2010/10/screen-shot-2010-10-20-at-63153-pm.png 1155w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p><strong>Thursday, Oct 21:</strong></p>
+<p>At about 6a this morning (about 12 hours after replacing the drive) I got another critical alert notification that &#8220;Drobo cannot currently protect your data against hard drive failures.&#8221;</p>
+<p>At about 9a the Mac Mini that the Drobo is connected to froze, so I had to power cycle that computer. When the Mac Mini finished rebooting, the Drobo was no longer connected to the Mac Mini. After attempting to reconnect the Drobo several times, I ended up power cycling the Drobo. It came back online and showed the file system for a several minutes, despite continuing to state that &#8220;Data Protection&#8221; was still in progress.</p>
+<p>Then, a few minutes later the Drobo unmounted from the Mac Mini again, but it shows up as unmounted and unformatted in the Apple Disk Utility. At that point the Drobo Dashboard started showing the Drobo&#8217;s file system is now &#8220;Unformatted&#8221; instead of it&#8217;s original &#8220;HFS+&#8221; file system.</p>
+<p>I suspect that one of my drives are bad, but the Drobo never tells me that and it is still &#8220;In Progress&#8221; of rebuilding the data protection.</p>
+<p>Around 7p I received a 2nd reply from Drobo support:</p>
+<blockquote><p>Lets try this next then:<br />
+1. Power down the computer.<br />
+2. Disconnect Firewire, then power to the Drobo.<br />
+3. Eject all of the drives.<br />
+4. Reconnect Firewire, then power to the Drobo.<br />
+5. Wait for the Drobo to connect to the Drobo Dashboard.<br />
+6. Put the Drobo into standby: Drobo Dashboard &gt; Advanced Controls&#8230; &gt; Tools &gt; Standby.<br />
+7. Disconnect Firewire, then power.<br />
+8. Re-insert all of the drives.<br />
+9. Reconnect Firewire, then USB.</p>
+<p>Let me know if this enables the Drobo to complete it&#8217;s re-layout.</p></blockquote>
+<p>I followed those steps exactly, except for replacing &#8220;then USB&#8221; with &#8220;then power&#8221; in step 9 (which I presumed was a typo).  3 hours later it was still showing the filesystem as &#8220;unformatted&#8221; and &#8220;appox. 1 minute remaining&#8221; on the data protection rebuild.</p>
+<p><strong>Friday, Oct 22:</strong></p>
+<p>Still not working and no further response from Drobo.  I&#8217;m stuck and frustrated, since I can&#8217;t really see what is happening behind the scenes with the Drobo.</p>
+<p><a href="/wp-content/uploads/2010/10/screen-shot-2010-10-22-at-122522-pm.png"><img class="aligncenter size-medium wp-image-234" title="Friday screen-shot of Drobo Dashboard" src="/wp-content/uploads/2010/10/screen-shot-2010-10-22-at-122522-pm-300x131.png" alt="" width="300" height="131" srcset="/wp-content/uploads/2010/10/screen-shot-2010-10-22-at-122522-pm-300x131.png 300w, /wp-content/uploads/2010/10/screen-shot-2010-10-22-at-122522-pm.png 1158w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p><a href="/wp-content/uploads/2010/10/screen-shot-2010-10-22-at-122522-pm.png"></a><strong>Are there any Drobo ubergeeks out there that can help me?</strong></p>
+]]></content:encoded>
+							<wfw:commentRss>/2010/10/22/drobo-woes/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+							</item>
+		<item>
+		<title>Latest iPhone App Picks</title>
+		<link>/2009/12/04/latest-iphone-app-picks/</link>
+				<comments>/2009/12/04/latest-iphone-app-picks/#respond</comments>
+				<pubDate>Fri, 04 Dec 2009 17:30:20 +0000</pubDate>
+		<dc:creator><![CDATA[billglick]]></dc:creator>
+				<category><![CDATA[Mac]]></category>
+		<category><![CDATA[Technology]]></category>
+		<category><![CDATA[Aim Instant Messaging]]></category>
+		<category><![CDATA[Deposit Checks]]></category>
+		<category><![CDATA[Espn]]></category>
+		<category><![CDATA[Facebook]]></category>
+		<category><![CDATA[Free Bible]]></category>
+		<category><![CDATA[Free Solitaire Games]]></category>
+		<category><![CDATA[Google]]></category>
+		<category><![CDATA[Google Apps]]></category>
+		<category><![CDATA[Iphone]]></category>
+		<category><![CDATA[Local Movie Show Times]]></category>
+		<category><![CDATA[Mate Matt]]></category>
+		<category><![CDATA[Office Mate]]></category>
+		<category><![CDATA[Pandora Radio]]></category>
+		<category><![CDATA[Paper Toss]]></category>
+		<category><![CDATA[Prescription Orders]]></category>
+		<category><![CDATA[Social Networking]]></category>
+		<category><![CDATA[Usaa]]></category>
+		<category><![CDATA[View Trailers]]></category>
+		<category><![CDATA[Vnc Viewer]]></category>
+		<category><![CDATA[Walgreens]]></category>
+
+		<guid isPermaLink="false">/?p=198</guid>
+				<description><![CDATA[Today we finally became a 2 iPhone family. As I was gathering up my suggestions of iPhone apps to share with my wife, I decided I&#8217;d go ahead and share them with everyone. Most of these apps are free. I&#8217;ve attempted to group them into types of apps as best as I can. Location Aware &#8230; <a href="/2009/12/04/latest-iphone-app-picks/" class="more-link">Continue reading <span class="screen-reader-text">Latest iPhone App Picks</span></a>]]></description>
+								<content:encoded><![CDATA[<p><img class="alignright size-full wp-image-199" title="iPhone Apps" src="/wp-content/uploads/2009/12/photo14.jpg" alt="" width="240" height="199" />Today we finally became a 2 iPhone family. As I was gathering up my suggestions of iPhone apps to share with my wife, I decided I&#8217;d go ahead and share them with everyone.  Most of these apps are free. I&#8217;ve attempted to group them into types of apps as best as I can.</p>
+<p><strong>Location Aware Apps:</strong></p>
+<ul>
+<li> <a href="http://itunes.apple.com/us/app/aroundme/id290051590?mt=8">AroundMe</a> &#8211; find things near you</li>
+<li><a href="http://itunes.apple.com/us/app/google-mobile-app/id284815942?mt=8">Google</a> &#8211; localized search, voice enabled, access to all Google apps</li>
+<li><a href="http://itunes.apple.com/us/app/gowalla/id304510106?mt=8">Gowalla</a> &#8211; track and share where you are</li>
+<li><a href="http://itunes.apple.com/us/app/iwant/id284945674?mt=8">iWant</a> &#8211; find things near you</li>
+<li><a href="http://itunes.apple.com/us/app/showtimes/id285018181?mt=8">Showtimes</a> &#8211; view local movie show times, read reviews, view trailers</li>
+<li><a href="http://itunes.apple.com/us/app/urbanspoon/id284708449?mt=8">Urbanspoon</a> &#8211; get random local restaurant recommendations</li>
+<li><a href="http://itunes.apple.com/us/app/copilot-live-north-america/id324327451?mt=8">CoPilot Live</a> &#8211; relatively inexpensive GPS navigation</li>
+</ul>
+<p><strong>Miscellaneous:</strong></p>
+<ul>
+<li><a href="http://itunes.apple.com/us/app/bible/id282935706?mt=8">Bible</a> &#8211; best free Bible app with most versions &#8211; developed by LifeChurch.tv</li>
+<li><a href="http://itunes.apple.com/us/app/wordpress-2/id335703880?mt=8">WordPress</a> &#8211; manage your WordPress blog</li>
+<li><a href="http://itunes.apple.com/us/app/photoshop-com-mobile/id331975235?mt=8">Photoshop Mobile</a> &#8211; Photoshop for simple editing of your iPhone photos</li>
+<li><a href="http://itunes.apple.com/us/app/remote/id284417350?mt=8">Remote</a> &#8211; control iTunes on your computer from your phone</li>
+<li><a href="http://itunes.apple.com/us/app/espn-scorecenter/id317469184?mt=8">ESPN ScoreCenter</a> &#8211; view scores and game updates</li>
+<li><a href="http://itunes.apple.com/us/app/walgreens/id335364882?mt=8">Walgreens</a> &#8211; we use this to manage our prescription orders</li>
+</ul>
+<p><strong>Social Networking</strong></p>
+<ul>
+<li><a href="http://itunes.apple.com/us/app/tweetie-2/id333903271?mt=8">Tweetie</a> &#8211; best Twitter app available</li>
+<li><a href="http://itunes.apple.com/us/app/facebook/id284882215?mt=8">Facebook</a> &#8211; connect with Facebook</li>
+<li><a href="http://itunes.apple.com/us/app/aim-free-edition/id281704574?mt=8">AIM</a> &#8211; instant messaging on the go</li>
+<li><a href="http://itunes.apple.com/us/app/yahoo-messenger/id309219097?mt=8">Yahoo Messenger</a> &#8211; instant messaging on the go</li>
+<li><a href="http://itunes.apple.com/us/app/pandora-radio/id284035177?mt=8">Pandora Radio</a> &#8211; streaming music to your taste &#8211; check out <em>Rockin&#8217; Holidays</em> channel</li>
+</ul>
+<p><strong>Financial</strong></p>
+<ul>
+<li><a href="http://itunes.apple.com/us/app/quicken-online-mobile/id313441563?mt=8">Quicken</a> &#8211; financial account overview via free Quicken Online</li>
+<li><a href="http://itunes.apple.com/us/app/paypal/id283646709?mt=8">PayPal</a> &#8211; pay people securely</li>
+<li><a href="http://itunes.apple.com/us/app/usaa/id312325565?mt=8">USAA</a> &#8211; best online bank &#8211; deposit checks with your camera &#8211; transfer money live</li>
+</ul>
+<p><strong>Games</strong></p>
+<ul>
+<li><a href="http://itunes.apple.com/us/app/paper-toss/id317917431?mt=8">Paper Toss</a> &#8211; waste more time than imaginable</li>
+<li><a href="http://itunes.apple.com/us/app/sol-free-solitaire/id287197884?mt=8">Sol Free</a> &#8211; best free solitaire games</li>
+<li><a href="http://itunes.apple.com/us/app/ibowl/id292182654?mt=8">iBowl</a> &#8211; like a Wii on your phone</li>
+</ul>
+<p><strong>Remote Connectivity</strong></p>
+<ul>
+<li><a href="http://itunes.apple.com/us/app/touchterm-ssh/id286623227?mt=8">TouchTerm</a> &#8211; ssh client for linux sysadmins</li>
+<li><a href="http://itunes.apple.com/us/app/mocha-vnc-lite/id284984448?mt=8">VNC</a> &#8211; remote vnc viewer for screen sharing</li>
+<li><a href="http://itunes.apple.com/us/app/remote-desktop-lite/id288362576?mt=8">RDP</a> &#8211; remote desktop for Windows</li>
+</ul>
+<p>My office mate, Matt, currenly has 254 apps installed on his iPhone.  That&#8217;s more than the iPhone is actually capable of displaying on it&#8217;s home pages.  Anyway, I also asked him for his recommendations of best apps.</p>
+<p><strong>Matt&#8217;s Picks:</strong></p>
+<ul>
+<li><a href="http://itunes.apple.com/us/app/now-playing/id284939567?mt=8">Now Playing</a></li>
+<li><a href="http://itunes.apple.com/us/app/weatherbug/id281940292?mt=8">WeatherBug</a></li>
+<li><a href="http://itunes.apple.com/us/app/grocery-iq/id290591617?mt=8">Grocery IQ </a></li>
+<li><a href="http://itunes.apple.com/us/app/where/id281790044?mt=8">Where</a></li>
+<li><a href="http://itunes.apple.com/us/app/facebook/id284882215?mt=8">Facebook</a></li>
+<li><a href="http://itunes.apple.com/us/app/i-dig-it-lite/id320632532?mt=8">iDig It</a> &#8211; underground farming game<a href="http://itunes.apple.com/us/app/i-dig-it-lite/id320632532?mt=8"><br />
+</a></li>
+<li><a href="http://itunes.apple.com/us/app/pocketbible-free/id328868862?mt=8">Pocket Bible</a> &#8211; read Bibles and books from Laradian<a href="http://itunes.apple.com/us/app/pocketbible-free/id328868862?mt=8"><br />
+</a></li>
+<li><a href="http://itunes.apple.com/us/app/motionx-gps-drive/id328095974?mt=8">MotionX GPS Drive</a> &#8211; very cheap GPS navigation<a href="http://itunes.apple.com/us/app/motionx-gps-drive/id328095974?mt=8"><br />
+</a></li>
+<li><a href="http://itunes.apple.com/us/app/motionx-gps/id299949744?mt=8">MotionX GPS</a> &#8211; track your path along a hike<a href="http://itunes.apple.com/us/app/motionx-gps/id299949744?mt=8"><br />
+</a></li>
+<li><a href="http://itunes.apple.com/us/app/paper-toss/id317917431?mt=8">Paper Toss</a></li>
+<li><a href="http://itunes.apple.com/us/app/strategery-lite/id303188552?mt=8">Strategery</a> &#8211; simpler version of Risk boardgame<a href="http://itunes.apple.com/us/app/strategery-lite/id303188552?mt=8"><br />
+</a></li>
+<li><a href="http://itunes.apple.com/us/app/pzizz-relax/id326427471?mt=8">Pzizz Relax</a> &#8211; take a power nap</li>
+<li><a href="http://itunes.apple.com/us/app/hold-on/id284963359?mt=8">Hold On</a> &#8211; hours of non-stop fun for the kids</li>
+<li><a href="http://itunes.apple.com/us/app/aim-free-edition/id281704574?mt=8">AIM</a> &#8211; instant messaging</li>
+</ul>
+<p><em><strong>What are your favorite iPhone apps that you use at least once a week?</strong></em></p>
+]]></content:encoded>
+							<wfw:commentRss>/2009/12/04/latest-iphone-app-picks/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>New Aluminum MacBook Review</title>
+		<link>/2008/10/29/new-aluminum-macbook-review/</link>
+				<comments>/2008/10/29/new-aluminum-macbook-review/#comments</comments>
+				<pubDate>Wed, 29 Oct 2008 18:59:00 +0000</pubDate>
+		<dc:creator><![CDATA[billglick]]></dc:creator>
+				<category><![CDATA[Mac]]></category>
+		<category><![CDATA[Technology]]></category>
+		<category><![CDATA[Aluminum]]></category>
+		<category><![CDATA[Glare]]></category>
+		<category><![CDATA[Keyboard]]></category>
+		<category><![CDATA[Laptop]]></category>
+		<category><![CDATA[Mbp]]></category>
+		<category><![CDATA[New Macbooks]]></category>
+		<category><![CDATA[Projector]]></category>
+		<category><![CDATA[Track Pad]]></category>
+		<category><![CDATA[Wireless Internet]]></category>
+
+		<guid isPermaLink="false">/?p=79</guid>
+				<description><![CDATA[We finally received our first of the new MacBooks at work today.  We&#8217;re considering making this our default, preferred laptop across the organization. So, I gave it a quick trial run for about 45 minutes. First, how does this keyboard feel?  I think it&#8217;s a tad bit cramped.  The response of the keys is ok, &#8230; <a href="/2008/10/29/new-aluminum-macbook-review/" class="more-link">Continue reading <span class="screen-reader-text">New Aluminum MacBook Review</span></a>]]></description>
+								<content:encoded><![CDATA[<p><img class="alignright" style="margin-top: 5px; margin-bottom: 5px; margin-left: 10px; margin-right: 10px; float: right;" src="http://cache.gawker.com/assets/images/gizmodo/2008/10/overview-gallery3-20081014.jpg" alt="New MacBook" width="300" /></p>
+<p>We finally received our first of the <a href="http://www.apple.com/macbook/">new MacBooks</a> at work today.  We&#8217;re considering making this our default, preferred laptop across the organization. So, I gave it a quick trial run for about 45 minutes.</p>
+<p>First, how does this keyboard feel?  I think it&#8217;s a tad bit cramped.  The response of the keys is ok, but I feel like my pinkies are held in uncomfortably tight.</p>
+<p>The screen seems fine to me.  Less real estate than I&#8217;m used to, but much easier to read than my 17&#8243; high res screen.</p>
+<p>The speaker response is very adequate.  A bit tinny, but fine for normal work use.</p>
+<p>The track pad seems pretty natural &#8211; I forget I don&#8217;t have a button.</p>
+<p>Sitting it on my lap, it feels too small for me.  But, I could get used to it.</p>
+<p>The compact size and light weight make it nice for moving around the building easily.</p>
+<p>The glossy screen is very nice when the display is set to bright.  But, if I&#8217;m trying to save power in a meeting by dimming the screen, the glare makes it hard to view.  But, again, I&#8217;d get used to it.</p>
+<p>I plugged in the laptop to a projector in a conference room, and it worked exactly as my MBP does as far as connectivity.  Looked fine.</p>
+<p>The entire machine just feels well made. While the keys look cheap, they work well. The screen is amazing and very rugged. All the metal and glass on the case feel awesome to the touch and yet extremely rugged.</p>
+<p>The only problem I had with the MacBook is that my wireless internet seemed to be really slow. I&#8217;m not sure if that&#8217;s an issue of the MacBook or if we were having problems here at the office today.</p>
+<p>Overall, I think it&#8217;s a great little laptop for typical users at our office. Some developers will still prefer the 17&#8243; MBP, but it&#8217;s adequate for the majority of our Mac users.</p>
+]]></content:encoded>
+							<wfw:commentRss>/2008/10/29/new-aluminum-macbook-review/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+							</item>
+		<item>
+		<title>How Fast is USB Disk on an AirPort Wireless Base Station?</title>
+		<link>/2008/08/23/how-fast-is-usb-disk-on-an-airport-wireless-base-station/</link>
+				<comments>/2008/08/23/how-fast-is-usb-disk-on-an-airport-wireless-base-station/#comments</comments>
+				<pubDate>Sat, 23 Aug 2008 19:37:22 +0000</pubDate>
+		<dc:creator><![CDATA[billglick]]></dc:creator>
+				<category><![CDATA[Mac]]></category>
+		<category><![CDATA[Technology]]></category>
+		<category><![CDATA[1tb]]></category>
+		<category><![CDATA[Apple Airport]]></category>
+		<category><![CDATA[Basestation]]></category>
+		<category><![CDATA[Gigabit Network]]></category>
+		<category><![CDATA[Hard Drives]]></category>
+		<category><![CDATA[Laptops]]></category>
+		<category><![CDATA[Throughput]]></category>
+		<category><![CDATA[Usb 2 0]]></category>
+		<category><![CDATA[Usb Disk]]></category>
+		<category><![CDATA[Usb Drive]]></category>
+		<category><![CDATA[Usb Drives]]></category>
+		<category><![CDATA[Usb Hard Drive]]></category>
+		<category><![CDATA[Usb Wireless]]></category>
+		<category><![CDATA[Wireless Base Station]]></category>
+
+		<guid isPermaLink="false">/?p=71</guid>
+				<description><![CDATA[Warning: This is a technical post, mostly to document and share my experience so others interested might stumble upon it. 🙂 So, I purchased a couple of new 1TB USB hard drives this week and have been trying to figure out how to best set them up for optimal speed and accessibility.  The latest setup &#8230; <a href="/2008/08/23/how-fast-is-usb-disk-on-an-airport-wireless-base-station/" class="more-link">Continue reading <span class="screen-reader-text">How Fast is USB Disk on an AirPort Wireless Base Station?</span></a>]]></description>
+								<content:encoded><![CDATA[<p><em>Warning: This is a technical post, mostly to document and share my experience so others interested might stumble upon it. <img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></em></p>
+<p><img class="alignright size-medium wp-image-73" title="airport_freeagents" src="/wp-content/uploads/2008/08/photo-300x225.jpg" alt="" width="300" height="225" srcset="/wp-content/uploads/2008/08/photo-300x225.jpg 300w, /wp-content/uploads/2008/08/photo.jpg 800w" sizes="(max-width: 300px) 100vw, 300px" />So, I purchased a couple of new <a href="http://www.seagate.com/www/en-us/products/external/freeagent_desktop_data_movers/">1TB USB hard drives</a> this week and have been trying to figure out how to best set them up for optimal speed and accessibility.  The latest setup is to connect them via USB to my <a href="http://www.apple.com/airportextreme/">Apple AirPort Extreme Basestation</a> as AirDisks.  I&#8217;ll be backing up my laptops to these drives daily (I&#8217;ll share the backup details later), so I was curious just how fast I could dump data to them.</p>
+<p>How fast should I be able to copy data to the USB hard drive attached to my Airport Extreme?</p>
+<ul>
+<li>210 GB/hr (480 Mbps) peak from server &#8211; limit of USB 2.0 is lower than my gigabit network</li>
+<li>131.8 GB/hr (300 Mbps) peak from laptop &#8211; limit of 802.11n</li>
+</ul>
+<p>But are those numbers realistic for average write speeds?  I&#8217;m currently averaging about 10.5 GB/hr.</p>
+<p><a href="http://discussions.apple.com/message.jspa?messageID=6530505">Somebody</a> suggested that the Airport Extreme is limited to about 5 MBps (17.57 GB/hr).  This has something to do with the processor in the Airport Extreme (APEB).  Here&#8217;s what they&#8217;re experiencing:</p>
+<ul>
+<li>reading from APEB: 16 MBps</li>
+<li>writing to APEB: 3.5 MBps average and 5-6 MBps peak</li>
+</ul>
+<p>3.5 MBps = 12.3 GB/hr which is about what I&#8217;m experiencing so far.  I have 4 USB disks connected to by AirPort, but I think this throughput should be for all drives combined.</p>
+<p><strong>If you have a USB disk attached to a network with something like the AirPort Extreme, let me know what kind of read and write speeds you are averaging.</strong></p>
+]]></content:encoded>
+							<wfw:commentRss>/2008/08/23/how-fast-is-usb-disk-on-an-airport-wireless-base-station/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+							</item>
+		<item>
+		<title>TwitterPod</title>
+		<link>/2008/01/28/twitterpod/</link>
+				<comments>/2008/01/28/twitterpod/#comments</comments>
+				<pubDate>Mon, 28 Jan 2008 13:06:23 +0000</pubDate>
+		<dc:creator><![CDATA[billglick]]></dc:creator>
+				<category><![CDATA[Mac]]></category>
+		<category><![CDATA[Technology]]></category>
+		<category><![CDATA[Spaz]]></category>
+		<category><![CDATA[Twitter]]></category>
+
+		<guid isPermaLink="false">/2008/01/28/twitterpod/</guid>
+				<description><![CDATA[A couple of months back I started logging and tracking my work via Twitter.  Today I found a new Twitter client that works much better for me on my Mac than Spaz.  If you use Twitter from a Mac, check out: TwitterPod Do you have any other Twitter tips that help you?]]></description>
+								<content:encoded><![CDATA[<p>A couple of months back I started <a href="/2007/11/11/time-tracking-with-twitter/">logging and tracking my work via Twitter</a>.  Today I found a new Twitter client that works much better for me on my Mac than Spaz.  If you use Twitter from a Mac, check out:</p>
+<ul>
+<li><a href="http://drikin.com/twitterpod/"><strong>TwitterPod</strong></a></li>
+</ul>
+<p><em><strong>Do you have any other Twitter tips that help you?</strong></em></p>
+]]></content:encoded>
+							<wfw:commentRss>/2008/01/28/twitterpod/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+							</item>
+		<item>
+		<title>Mac Tip &#8211; Better Screen Captures</title>
+		<link>/2007/11/07/mac-tip-better-screen-captures/</link>
+				<comments>/2007/11/07/mac-tip-better-screen-captures/#respond</comments>
+				<pubDate>Wed, 07 Nov 2007 17:59:00 +0000</pubDate>
+		<dc:creator><![CDATA[billglick]]></dc:creator>
+				<category><![CDATA[Mac]]></category>
+		<category><![CDATA[Application Window]]></category>
+		<category><![CDATA[Grabs]]></category>
+		<category><![CDATA[Keyboard Shortcuts]]></category>
+		<category><![CDATA[Mac Os X]]></category>
+		<category><![CDATA[Mac Tip]]></category>
+		<category><![CDATA[Old Dog New Tricks]]></category>
+		<category><![CDATA[Os X]]></category>
+		<category><![CDATA[Screen Capture]]></category>
+		<category><![CDATA[Screen Captures]]></category>
+		<category><![CDATA[Spacebar]]></category>
+
+		<guid isPermaLink="false">/?p=16</guid>
+				<description><![CDATA[Often times I need to grab a screen capture from my Mac. For years I&#8217;ve been doing a Command+Shift+3, which grabs a screen capture of my entire desktop. But, I generally just want a screen capture of my current application window. Well, that&#8217;s still relatively easy&#8230; just do a Command+Shift+4, SpaceBar, and then click on &#8230; <a href="/2007/11/07/mac-tip-better-screen-captures/" class="more-link">Continue reading <span class="screen-reader-text">Mac Tip &#8211; Better Screen Captures</span></a>]]></description>
+								<content:encoded><![CDATA[<p>Often times I need to grab a screen capture from my Mac.  For years I&#8217;ve been doing a <span style="font-weight: bold; font-family: courier new;">Command+Shift+3</span>, which grabs a screen capture of my entire desktop.</p>
+<p>But, I generally just want a screen capture of my current application window.  Well, that&#8217;s still relatively easy&#8230; just do a <span style="font-weight: bold; font-family: courier new;">Command+Shift+4</span>, <span style="font-weight: bold; font-family: courier new;">SpaceBar</span>, and then click on the window you want to save.</p>
+<p>Who says you can&#8217;t teach an old dog new tricks?  I&#8217;m trying to be teachable.</p>
+<p>Here&#8217;s a link to some other basic <a href="http://docs.info.apple.com/article.html?artnum=75459">OS X keyboard shortcuts</a>.</p>
+<p><span style="font-weight: bold; font-style: italic">What are some of your favorite keyboard shortcuts in Mac OS X?</span></p>
+]]></content:encoded>
+							<wfw:commentRss>/2007/11/07/mac-tip-better-screen-captures/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+	</channel>
+</rss>

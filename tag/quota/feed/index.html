@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Quota &#8211; Bill Glick .:. tech . art . God . life</title>
+	<atom:link href="/tag/quota/feed/" rel="self" type="application/rss+xml" />
+	<link>http://blog.billglick.com</link>
+	<description>thoughts on technology, arts, God, and life</description>
+	<lastBuildDate>Tue, 02 Dec 2008 04:19:36 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+	<item>
+		<title>Gmail IMAP Broken</title>
+		<link>/2007/12/05/gmail-imap-broken/</link>
+				<comments>/2007/12/05/gmail-imap-broken/#comments</comments>
+				<pubDate>Wed, 05 Dec 2007 13:18:52 +0000</pubDate>
+		<dc:creator><![CDATA[billglick]]></dc:creator>
+				<category><![CDATA[Technology]]></category>
+		<category><![CDATA[Apple]]></category>
+		<category><![CDATA[Capability]]></category>
+		<category><![CDATA[Com Port]]></category>
+		<category><![CDATA[Failure]]></category>
+		<category><![CDATA[Gmail]]></category>
+		<category><![CDATA[Imap Account]]></category>
+		<category><![CDATA[Imap Connection]]></category>
+		<category><![CDATA[Imap Mail]]></category>
+		<category><![CDATA[Imap Port]]></category>
+		<category><![CDATA[Lockdown]]></category>
+		<category><![CDATA[Quota]]></category>
+		<category><![CDATA[Web Interface]]></category>
+
+		<guid isPermaLink="false">/2007/12/05/gmail-imap-broken/</guid>
+				<description><![CDATA[Starting yesterday afternoon sometime, my IMAP access to Gmail from Apple Mail 3.1 has been broken. The IMAP account won&#8217;t go online. I can&#8217;t find any mention of this sort of problem on the internet. My Gmail works fine from their web interface. I keep getting the following error: 2.74 NO [ALERT] Lockdown in sector &#8230; <a href="/2007/12/05/gmail-imap-broken/" class="more-link">Continue reading <span class="screen-reader-text">Gmail IMAP Broken</span></a>]]></description>
+								<content:encoded><![CDATA[<p>Starting yesterday afternoon sometime, my IMAP access to Gmail from Apple Mail 3.1 has been broken.  The IMAP account won&#8217;t go online.  I can&#8217;t find any mention of this sort of problem on the internet. My Gmail works fine from their web interface.</p>
+<p>I keep getting the following error:</p>
+<blockquote><p><strong>2.74 NO [ALERT] Lockdown in sector 4 (Failure) </strong></p></blockquote>
+<p>Here&#8217;s a sample log of what I&#8217;m seeing during the IMAP connection:</p>
+<blockquote><p>CONNECTED Dec 05 11:58:58.586 [kCFStreamSocketSecurityLevelNegotiatedSSL]  &#8212; host:imap.gmail.com &#8212; port:993 &#8212; socket:0x15b46980 &#8212; thread:0x19e48820</p>
+<p>READ Dec 05 11:58:58.769 [kCFStreamSocketSecurityLevelNegotiatedSSL]  &#8212; host:imap.gmail.com &#8212; port:993 &#8212; socket:0x15b46980 &#8212; thread:0x19e48820<br />
+* OK Gimap ready for requests from 141.142.220.140 h19if2297183wxd</p>
+<p>WROTE Dec 05 11:58:58.891 [kCFStreamSocketSecurityLevelNegotiatedSSL]  &#8212; host:imap.gmail.com &#8212; port:993 &#8212; socket:0x15b46980 &#8212; thread:0x19e4ce00<br />
+1.74 CAPABILITY</p>
+<p>READ Dec 05 11:58:58.973 [kCFStreamSocketSecurityLevelNegotiatedSSL]  &#8212; host:imap.gmail.com &#8212; port:993 &#8212; socket:0x15b46980 &#8212; thread:0x19e4ce00<br />
+* CAPABILITY IMAP4rev1 UNSELECT IDLE NAMESPACE QUOTA XLIST XYZZY</p>
+<p>1.74 OK Thats all she wrote! h19if2297183wxd</p>
+<p>WROTE Dec 05 11:58:59.025 [kCFStreamSocketSecurityLevelNegotiatedSSL]  &#8212; host:imap.gmail.com &#8212; port:993 &#8212; socket:0x15b46980 &#8212; thread:0x19e4ce00<br />
+2.74 LOGIN billglick ********</p>
+<p>READ Dec 05 11:58:59.448 [kCFStreamSocketSecurityLevelNegotiatedSSL]  &#8212; host:imap.gmail.com &#8212; port:993 &#8212; socket:0x15b46980 &#8212; thread:0x19e4ce00<br />
+2.74 NO [ALERT] Lockdown in sector 4 (Failure)</p></blockquote>
+<p><em><strong>Can anyone help me fix this?</strong></em> I presume it&#8217;s a problem on Gmail&#8217;s end, but I don&#8217;t know how to confirm that.</p>
+]]></content:encoded>
+							<wfw:commentRss>/2007/12/05/gmail-imap-broken/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+							</item>
+	</channel>
+</rss>
